@@ -10,8 +10,8 @@ public interface EmployeeDao {
 
     Employee getEmployeeById(int id);
 
-    void setEmployeeById(int id, String firstName, String lastName, String gender, int age, int cityId);
+    void setEmployeeById(Employee employee);
 
-    void deleteEmployeeById(int id);
+    void deleteEmployeeById(Employee employee);
     }
 
