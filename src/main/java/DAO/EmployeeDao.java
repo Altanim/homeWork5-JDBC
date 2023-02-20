@@ -6,12 +6,12 @@ public interface EmployeeDao {
 
     List<Employee> getAllEmployees();
 
+    Employee getEmployeeById(long id);
+
     void createEmployee(Employee employee);
 
-    Employee getEmployeeById(int id);
+    void setEmployee(Employee employee);
 
-    void setEmployeeById(Employee employee);
-
-    void deleteEmployeeById(Employee employee);
+    void deleteEmployeeById(long id);
     }
 
