@@ -2,6 +2,7 @@ package DAO.impl;
 
 import DAO.EmployeeDao;
 import configuration.HibernateSessionFactoryUtil;
+import model.City;
 import model.Employee;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

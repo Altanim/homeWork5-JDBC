@@ -23,7 +23,7 @@ public class CityDaoImpl implements CityDao {
 
     @Override
     public City getCityById(long id) {
-        City city = new City();
+        City city = null;
         try (Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             city = session.get(City.class, id);
@@ -34,14 +34,13 @@ public class CityDaoImpl implements CityDao {
 
     @Override
     public void createCity(City city) {
-        if (!city.getCityName().equals("default")) {
             try (Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
                 Transaction transaction = session.beginTransaction();
                 session.save(city);
                 transaction.commit();
             }
         }
-    }
+
 
     @Override
     public void updateCity(City city) {
